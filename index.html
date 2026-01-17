@@ -1,11 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Pandit Ji | Book Pandit Online</title>
+  <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
-    i am learning git
+
+  <!-- Header -->
+  <header>
+    <h1>Pandit Ji </h1>
+    <p>Book Trusted Pandit for Your Rituals at your door step</p>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Digital Pandit Booking Platform</h2>
+    <p>Fixed price • Verified Pandits • Easy booking</p>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Services</h2>
+
+    <div class="card">
+      <h3>Grih Pravesh Puja</h3>
+      <p>Duration: 2 hours</p>
+      <p class="price">₹1500</p>
+      <button onclick="openBooking('Grih Pravesh Puja',1500)">Book Now</button>
+    </div>
+
+    <div class="card">
+      <h3>Satyanarayan Katha</h3>
+      <p>Duration: 3 hours</p>
+      <p class="price">₹2000</p>
+      <button onclick="openBooking('Satyanarayan Katha',2000)">Book Now</button>
+    </div>
+
+    <div class="card">
+      <h3>Wedding Puja</h3>
+      <p>Duration: 4 hours</p>
+      <p class="price">₹8000</p>
+      <button onclick="openBooking('Wedding Puja',8000)">Book Now</button>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="booking" id="bookingSection">
+    <h2>Book Pandit</h2>
+    <form onsubmit="submitBooking(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <input type="text" id="city" placeholder="City" required>
+      <input type="date" id="date" required>
+      <input type="time" id="time" required>
+      <input type="text" id="service" readonly>
+      <input type="text" id="price" readonly>
+      <button type="submit">Confirm Booking</button>
+    </form>
+    <p id="message"></p>
+  </section>
+
+  <!-- Booking List -->
+  <section class="bookings">
+    <h2>Bookings</h2>
+    <ul id="bookingList"></ul>
+  </section>
+
+  <footer>
+    <p>© 2026 Pandit Ji | Digital Puja Services</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
